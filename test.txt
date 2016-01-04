@@ -1,0 +1,87 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+static const char alphanum[] =
+"0123456789"
+"!@#$%^&*"
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+"abcdefghijklmnopqrstuvwxyz";
+
+static const char num[] =
+"0123456789"
+"0123456789""0123456789""0123456789";
+
+static const char smallstr[] =
+"abcdefghijklmnopqrstuvwxyz""abcdefghijklmnopqrstuvwxyz""abcdefghijklmnopqrstuvwxyz"
+"abcdefghijklmnopqrstuvwxyz";
+
+static const char capitalstr[] =
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ""ABCDEFGHIJKLMNOPQRSTUVWXYZ""ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+
+int stringLength = sizeof(alphanum) - 1;
+
+char genRandomsmallstr()  // Random string generator function.
+{
+
+    return smallstr[rand() % stringLength];
+
+}
+
+char genRandomcapitalstr()  // Random string generator function.
+{
+
+    return capitalstr[rand() % stringLength];
+
+}
+
+char genRandom()  // Random string generator function.
+{
+
+    return alphanum[rand() % stringLength];
+
+}
+
+char genRandomNumber()  // Random string generator function.
+{
+
+    return num[rand() % 10];
+
+}
+
+int main()
+{
+    srand(time(0));
+    for(int z=0; z < 21; z++)
+    {
+        cout << genRandomsmallstr() << " ";
+       
+
+    }cout<<endl;
+   
+    for(int z=0; z < 21; z++)
+    {
+
+        cout << genRandomcapitalstr() << " ";
+
+
+    }
+    cout<<endl;
+    for(int z=0; z < 21; z++)
+    {
+   
+        cout << genRandomcapitalstr() << " ";
+
+
+    }cout<<endl;
+   
+    for(int z=0; z < 21; z++)
+    {
+
+        cout << genRandomNumber() << " ";
+
+    }cout<<endl;
+    return 0;
+
+}
